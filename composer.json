@@ -1,0 +1,25 @@
+{
+    "name": "visiosoft/puredash-theme",
+    "type": "streams-addon",
+    "description": "The official dashboard theme for Pure Panel.",
+    "keywords": [
+        "cms",
+        "theme",
+        "pure",
+        "laravel",
+        "visiosoft"
+    ],
+    "authors": [
+        {
+            "name": "Vedat Akdogan.",
+            "email": "vedatakdogan@live.com",
+            "homepage": "https://vedatakdogan.com",
+            "role": "Owner"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Visiosoft\\PuredashTheme\\": "src/"
+        }
+    }
+}

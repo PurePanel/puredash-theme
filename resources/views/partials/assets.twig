@@ -1,0 +1,9 @@
+{% for style in asset_styles("styles.css") %}
+{{ style|raw }}
+{% endfor %}
+
+{{ template.includes.render('cp_scripts')|raw }}
+
+{% for script in asset_scripts("scripts.js") %}
+{{ script|raw }}
+{% endfor %}
