@@ -2,7 +2,7 @@
 {% if message_exists('important') %}
     <div class="alert alert-danger">
         {% for message in message_pull('important') %}
-            {{ trans(message)|markdown }}
+            {{ trans(message) }}
         {% endfor %}
     </div>
 {% endif %}
@@ -14,7 +14,7 @@
             <span>&times;</span>
         </button>
         {% for message in message_pull('success') %}
-            {{ trans(message)|markdown }}
+            {{ trans(message) }}
         {% endfor %}
     </div>
 {% endif %}
@@ -26,7 +26,7 @@
             <span>&times;</span>
         </button>
         {% for message in message_pull('info') %}
-            {{ trans(message)|markdown }}
+            {{ trans(message) }}
         {% endfor %}
     </div>
 {% endif %}
@@ -38,7 +38,7 @@
             <span>&times;</span>
         </button>
         {% for message in message_pull('warning') %}
-            {{ trans(message)|markdown }}
+            {{ trans(message) }}
         {% endfor %}
     </div>
 {% endif %}
@@ -50,7 +50,7 @@
             <span>&times;</span>
         </button>
         {% for message in message_pull('error') %}
-            {{ trans(message)|markdown }}
+            {{ trans(message) }}
         {% endfor %}
     </div>
 {% endif %}

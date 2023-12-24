@@ -1,6 +1,5 @@
 <?php namespace Visiosoft\PuredashTheme\Listener;
 
-use Anomaly\PreferencesModule\Preference\Contract\PreferenceRepositoryInterface;
 use Anomaly\SettingsModule\Setting\Contract\SettingRepositoryInterface;
 use Anomaly\Streams\Platform\Ui\ControlPanel\Component\Navigation\Event\SortNavigation;
 
@@ -27,10 +26,9 @@ class ApplySorting
      * @param SettingRepositoryInterface    $settings
      * @param PreferenceRepositoryInterface $preferences
      */
-    public function __construct(SettingRepositoryInterface $settings, PreferenceRepositoryInterface $preferences)
+    public function __construct(SettingRepositoryInterface $settings)
     {
         $this->settings    = $settings;
-        $this->preferences = $preferences;
     }
 
     /**
@@ -47,9 +45,7 @@ class ApplySorting
             $navigation = array_merge(array_flip((array)json_decode($settings)), $navigation);
         }
 
-        if ($preferences = $this->preferences->value('visiosoft.theme.puredash::navigation')) {
-            $navigation = array_merge(array_flip((array)json_decode($preferences)), $navigation);
-        }
+
 
         /**
          * Remove non-installed addons
